@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://kit.fontawesome.com/4f22b0181c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&family=Sora:wght@300;400&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar fixed-top  navbar-expand-lg ">
+      <div class="container-fluid nav-container">
+
+        <!-- left -->
+        <div class="collapse navbar-collapse order-lg-1 order-3 navigation-menu" >
+          <ul class="navbar-nav  ">
+            <li class="nav-item  px-3">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+
+            <li class="nav-item px-3">
+              <a class="nav-link" href="#How_it_works">How it works</a>
+            </li>
+          </ul>
+        </div>
+        <!-- left -->
+
+        <a class="navbar-brand order-1 mr-lg-0" href="#">
+          <img src="{{ url_for('static', filename='pictures/bonanza.png') }}" alt="" width="100"">
+        </a>
+        <button class="navbar-toggler order-2" type="button" data-bs-toggle="collapse" data-bs-target=".navigation-menu" >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- right -->
+        <div class="collapse navbar-collapse order-lg-3 order-4 navigation-menu" >
+          <ul class="navbar-nav">
+            <li class="nav-item px-3">
+              <div class="cart">
+                <a class="nav-link" href="cart.html"><i class="fa-solid fa-cart-shopping"></i></i></a>
+                <div id="cartAmount" class="cartAmount">0</div>
+              </div>
+            </li>
+            <li class="nav-item px-3">
+              <a class="nav-link" href="signIn.html">Sign in</a>
+            </li>
+            <li class="nav-item px-3">
+              <a href="#lottery"><button class="wiggly btn btn-style-green " type="button">Choose a Lottery</button></a>
+            </li>
+          </ul>
+        </div>
+        <!-- right -->
+      </div>
+    </nav>
+    <!-- navbar -->
+
+    <!-- hero -->
+    <div class=" hero-main container-fluid">
+      <div class="row ">
+        <div class="left-hero col-lg-6 col-md-12 col-sm-12  ">
+          <h1 class="char display-5 fw-bold lh-1 mb-3">Play to help!</h1>
+          <p class="lead">Help society and get a chance to win  one of  our amazing gifts!<br> The more you contribute, the more you help and the better chance <br> you have at winning. We believe in a world where everybody wins. </p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <a href="#lottery"><button type="button" class="btn btn-style-blue btn-lg px-4 me-md-2">Choose a lottery</button></a>
+          </div>
+        </div>
+
+        <div class="right-hero col-lg-6 col-md-12 col-sm-12  ">
+          <div class="card card-back shadow-sm p-2 mb-5 rounded " style="width: 25rem;">
+            <img src="{{ url_for('static', filename='pictures/hero1.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body " >
+              <h5 class="card-title">L'Etoile du Berger</h5>
+              <p class="card-text">L'Etoile du Berger est une nouvelle association pour la rehabilitation des enfants en difficulté. Notre Centre se trouve a Albion, ou 11 enfants sont pris en charge.</p>
+              <a href="https://defimedia.info/gilbert-lebreux-directeur-fondateur-de-long-etoile-du-berger-le-social-comme-vocation-de-la-banque-travailleur-social" class="btn btn-style-blue">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- hero -->
+
+    <!-- Lottery -->
+    <div class="container-fluid carou-fluid">
+      <div class="container  carou-container reveal fade-left ">
+        <h2 id="lottery" class="title pb-2  border-bottom text-center">Lottery</h2>
+
+        <div class="album py-5 ">
+          <div class="container">
+            <div id="shop" class="shop row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Lottery -->
+
+    <!-- How it Works -->
+    <div class="how-main container-fluid reveal fade-right">
+      <div class="how container px-4 py-5 " id="featured-3">
+        <h2 id="How_it_works" class="pb-2 border-bottom ">How it works</h2>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+
+          <!-- left -->
+          <div class="feature col">
+            <div class="d-inline-flex align-items-center justify-content-center bg-gradient text-dark fs-2 mb-3">
+              <i class="bi bi-box-arrow-in-up-left"></i>
+            </div>
+            <h4>Choose a Lottery</h4>
+            <ul>
+              <li>Pick an item that you want to win.</li>
+              <li>Buy a lottery ticket. You can buy as many tickets as you want.</li>
+              <li>There will be a draw on the date specified and the winner will be contacted.</li>
+            </ul>
+          </div>
+          <!-- left -->
+
+          <!-- middle -->
+          <div class="feature col">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center bg-gradient fs-2 mb-3">
+              <i class="bi bi-arrow-through-heart"></i>
+            </div>
+            <h4>NGOs</h4>
+            <p>Our mission is to raise fund and awareness for NGOs. Therefore during a time period, one NGO will be put in light and the fund collected will be directed to them. </p>
+          </div>
+          <!-- middle -->
+
+          <!-- right -->
+          <div class="feature col">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center bg-gradient fs-2 mb-3">
+              <i class="bi bi-trophy"></i>
+            </div>
+            <h4>You Win</h4>
+            <p>"The more you give, the more you get." This quote has never been so true! By playing our lottery and spreading the word, you will:</p>
+            <ul>
+              <li>Help people in need and society as whole.</li>
+              <li>Have the chance to win amazing gifts.</li>
+              <li>Give us the possibility to propose even more formidable gifts for you to win.</li>
+            </ul>
+          </div>
+          <!-- right -->
+        </div>
+      </div>
+    </div>
+    <!-- How it works -->
+
+
+
+    <script src="{{ url_for('static', filename='js/data.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/lottery.js') }}" charset="utf-8"></script>
+
+
+    <!-- Bootstrap script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+
+
+    <!--Do no use this one it interferes with my nav toggler <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>  -->
+
+
+
+     <!-- Bootstrapscript -->
+  </body>
+</html>
