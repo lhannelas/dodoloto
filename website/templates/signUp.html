@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign Up</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://kit.fontawesome.com/4f22b0181c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
+  </head>
+  <body>
+
+        <!-- navbar -->
+        <nav class="navbar fixed-top  navbar-expand-lg bg-white">
+          <div class="container-fluid nav-container">
+
+            <!-- left -->
+            <div class="collapse navbar-collapse order-lg-1 order-3 navigation-menu" >
+
+            </div>
+            <!-- left -->
+
+            <a class="navbar-brand order-1 mr-lg-0" href="/">
+              <img src="{{ url_for('static', filename='pictures/bonanzatop.png') }}" alt="" width="100"">
+            </a>
+            <button class="navbar-toggler order-2" type="button" data-bs-toggle="collapse" data-bs-target=".navigation-menu" >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- right -->
+            <div class="collapse navbar-collapse order-lg-3 order-4 navigation-menu" >
+
+            </div>
+            <!-- right -->
+          </div>
+        </nav>
+
+        <!-- navbar -->
+
+        <!--flash message-->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          {% for category, message in messages %}
+          {% if category == 'error' %}
+          <div style="margin-top:8rem;" class="alert alert-danger alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          {% else %}
+          <div style="margin-top:8rem;" class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          {% endif %}
+          {% endfor %}
+        {% endif %}
+        {% endwith %}
+
+        <!--flash message-->
+
+        <!--   form     -->
+        <div class="container control">
+          <div class="main-sign container mt-5" id="container">
+            <div class="form-container sign-in-container">
+              <form method="POST" class="form-sign" >
+                <h1 class="font-weight-bold">Create Account</h1>
+
+                <input id="firstName" class="sign-input" type="text" name="firstName" placeholder="First Name" />
+                <input id="email" class="sign-input" type="email" name="email" placeholder="Email" />
+                <input id="password1" class="sign-input" type="password" name="password1" placeholder="Password" />
+                <input id="password2" class="sign-input" type="password" name="password2" placeholder="Confirm Password" />
+                <input  type="submit" class="btn btn-style-green btn-rounded">
+              </form>
+            </div>
+
+
+            <div class="overlay-container">
+              <div class="overlay">
+                <div class="overlay-panel overlay-right">
+                  <h1 class="font-weight-bold">Good to see you!<h1>
+                      <p class="sign-p">You already have an account? <br>Sign in!</p>
+                    <a href="/login"><button class="but" id="signIn">Sign In</button></a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+<!--    <script src="{{ url_for('static', filename='js/auth.js') }}" charset="utf-8"></script>-->
+    <!-- Bootstrap script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+
+
+    <!--Do no use this one it interferes with my nav toggler <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>  -->
+
+
+
+     <!-- Bootstrapscript -->
+  </body>
+</html>
